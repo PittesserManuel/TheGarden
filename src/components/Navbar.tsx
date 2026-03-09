@@ -51,6 +51,15 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            {/* Member Login */}
+            <Link
+              href="/member/login"
+              className={`text-sm font-medium tracking-wide uppercase transition-colors hover:text-garden-500 ${
+                isScrolled ? 'text-gray-700' : 'text-white/90'
+              }`}
+            >
+              Mitglied
+            </Link>
             {/* Cart Button */}
             <button
               onClick={() => setIsCartOpen(true)}
@@ -108,6 +117,13 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <Link
+              href="/member/login"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block text-garden-600 hover:text-garden-700 font-medium py-2"
+            >
+              👤 Mitglied Login
+            </Link>
           </div>
         </div>
       )}
